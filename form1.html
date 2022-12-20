@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        @media screen and (max-width:1560px) {
+            .kirtan {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" action="insert.php">
+        <table style="width: 100%;">
+            <tr>
+                <td>Name:<b style=" color:red;">*</b></td>
+        <td><input type="text" name="First_name" placeholder="Name in uppercase" required></td>
+        </tr>
+        <tr>
+            <td>Surname:<b style="color:red ;">*</b></td>
+            <td><input type="text" name="Surname" placeholder="Surname in uppercase" required></td>
+        </tr>
+        <tr>
+            <td>Number:<b style="color:red ;">*</b></td>
+            <td><input type="tel" name="Mobile" placeholder="Mobile Number" required minlength="10" maxlength="15">
+            </td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td><textarea name="Address" placeholder="Enter Address" rows="3" cols="25" maxlength="50"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Password:<b style="color:red ;">*</b></td>
+            <td><input type="password" name="Password" required></td>
+        </tr>
+        <tr>
+            <td>
+                <center><input type="Submit"></center>
+            </td>
+        </tr>
+        </table>
+    </form>
+    <form action="view.php" method="post">
+        Name: <input type="text" name="F_name" placeholder="Name in uppercase">
+        <button type="submit">Fetch</button>
+
+    </form>
+
+</body>
+
+</html>
